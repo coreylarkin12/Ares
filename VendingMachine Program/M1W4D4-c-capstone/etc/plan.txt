@@ -1,0 +1,78 @@
+output consumption message ("munch munch," etc.)
+
+audit log - preferrably as each action happens is updated
+
+sales report - separate file when option selected, using method
+
+
+unit tests
+
+
+is there enough money to make purchase
+
+is there enough quantity to make purchase
+
+quantity remaining might not be changing
+
+
+filepath sanitization - make sure file is in correct place
+
+is multiple streamwriters an issue?
+
+
+~~~UPDATED~~~
+
+
+class: 
+VendingMachine
+--------------
+variable:
+	private dictionary<string, VendingMachineItem>
+--------------
+contructor:
+	pull in line
+	create item with line
+	fill dictionary with item
+	repeat until end of file
+--------------
+property:
+	Balance
+--------------
+method:
+	FeedMoney()
+	SelectProduct()
+	FinishTransaction()
+	MakeChange()
+	UpdateLog()
+
+
+**
+
+
+class: 
+VendingMachineItem
+------------------
+constructor:
+	take in line
+------------------
+property:
+	Name
+	Quantity
+	Price
+------------------
+method:
+
+
+**
+
+	
+class:
+UserInterface
+-------------
+method:
+	Run()
+	MainMenu()
+	DisplayVendingMachineItems()
+	Purchase()
+	Exit()
+	Dispense()
