@@ -7,10 +7,11 @@ namespace InterviewQuiz2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
             Console.WriteLine();
+
             Questions Ask = new Questions();
             Ask.AskQuestions();
+
             Console.WriteLine(Ask.ToString());
             Console.Read();
         }
