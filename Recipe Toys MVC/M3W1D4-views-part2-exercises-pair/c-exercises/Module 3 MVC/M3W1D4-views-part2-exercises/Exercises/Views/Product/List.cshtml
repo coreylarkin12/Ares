@@ -1,0 +1,79 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using Exercises.Models;
+@model List<Exercises.Models.Product>
+
+
+<h2 style="text-align: center; margin: 0 auto; padding-bottom: 30px;">Toy Department</h2>
+
+    <ul style="list-style:none; text-align: left; padding-bottom: 50px;">
+            
+    @foreach (Product toyBalls in Model)
+    {
+        if (toyBalls.ProductId == "SKU-1234")
+        {
+                    
+            <li style="float: left;"><img src="~/Content/images/toy-balls.jpg" style="width: 90px;" /></li>
+            <li style="padding-left: 120px; font-size: 12px;">@toyBalls.Name Best Seller!</li>
+            <li style="padding-left: 120px; font-size: 12px;">@toyBalls.Manufacturer</li>
+            <li style="padding-left: 120px; font-size: 12px;">@toyBalls.Price</li>
+            <li style="padding-left: 120px; font-size: 12px;">@toyBalls.WeightIbLbs</li>
+            <li style="padding-left: 120px; padding-bottom: 15px; font-size: 12px;"><img src="~/Content/images/4-star.png" style="width:80px; " /></li>
+            <li style="border: 1px solid lightgray; width: 550px;"></li>
+        }
+        else if (toyBalls.ProductId == "SKU-2345")
+        {
+            <li style="float: left; padding-top:15px;"><img src="~/Content/images/toy-car.jpg" style="width: 90px;" /></li>
+            <li style="padding-left: 120px; font-size: 12px;">@toyBalls.Name</li>
+            <li style="padding-left: 120px; font-size: 12px;">@toyBalls.Manufacturer</li>
+            <li style="padding-left: 120px; font-size: 12px;">@toyBalls.Price</li>
+            <li style="padding-left: 120px; font-size: 12px;">@toyBalls.WeightIbLbs</li>
+            <li style="padding-left: 120px; padding-bottom: 15px; font-size: 12px;"><img src="~/Content/images/3-star.png" style="width:80px; " /></li>
+            <li style="border: 1px solid lightgray; width: 550px;"></li>
+        }
+        else if (toyBalls.ProductId == "SKU-5678")
+        {
+            <li style="float: left; padding-top:15px;"><img src="~/Content/images/toy-gym.jpg" style="width: 90px;" /></li>
+            <li style="padding-left: 120px; font-size: 12px;">@toyBalls.Name</li>
+            <li style="padding-left: 120px; font-size: 12px;">@toyBalls.Manufacturer</li>
+            <li style="padding-left: 120px; font-size: 12px;">@toyBalls.Price</li>
+            <li style="padding-left: 120px; font-size: 12px;">@toyBalls.WeightIbLbs</li>
+            <li style="padding-left: 120px; padding-bottom: 15px; font-size: 12px;"><img src="~/Content/images/1-star.png" style="width:80px; " /></li>
+            <li style="border: 1px solid lightgray; width: 550px;"></li>
+        }
+        else if (toyBalls.ProductId == "SKU-3333")
+        {
+
+            <li style="float: left; padding-top:15px;"><img src="~/Content/images/toy-horse.jpg" style="width: 90px;" /></li>
+            <li style="padding-left: 120px; font-size: 12px;">@toyBalls.Name</li>
+            <li style="padding-left: 120px; font-size: 12px;">@toyBalls.Manufacturer</li>
+            <li style="padding-left: 120px; font-size: 12px;">@toyBalls.Price</li>
+            <li style="padding-left: 120px; font-size: 12px;">@toyBalls.WeightIbLbs</li>
+            <li style="padding-left: 120px; padding-bottom: 15px; font-size: 12px;"><img src="~/Content/images/4-star.png" style="width:80px; " /></li>
+            <li style="border: 1px solid lightgray; width: 550px;"></li>
+        }
+        else if (toyBalls.ProductId == "SKU-4567")
+        {
+
+            <li style="float: left; padding-top:15px;"><img src="~/Content/images/toy-snail.jpg" style="width: 90px;" /></li>
+            <li style="padding-left: 120px; font-size: 12px;">@toyBalls.Name Best Seller!</li>
+            <li style="padding-left: 120px; font-size: 12px;">@toyBalls.Manufacturer</li>
+            <li style="padding-left: 120px; font-size: 12px;">@toyBalls.Price</li>
+            <li style="padding-left: 120px; font-size: 12px;">@toyBalls.WeightIbLbs</li>
+            <li style="padding-left: 120px; padding-bottom: 15px; font-size: 12px;"><img src="~/Content/images/5-star.png" style="width:80px; " /></li>
+            <li style="border: 1px solid lightgray; width: 550px;"></li>
+        }
+        else
+        {
+            <li style="float: left; padding-top:15px;"><img src="~/Content/images/toy-tricycle.jpg" style="width: 90px;" /></li>
+            <li style="padding-left: 120px; font-size: 12px;">@toyBalls.Name Best Seller!</li>
+            <li style="padding-left: 120px; font-size: 12px;">@toyBalls.Manufacturer</li>
+            <li style="padding-left: 120px; font-size: 12px;">@toyBalls.Price</li>
+            <li style="padding-left: 120px; font-size: 12px;">@toyBalls.WeightIbLbs</li>
+            <li style="padding-left: 120px; padding-bottom: 30px; font-size: 12px;"><img src="~/Content/images/5-star.png" style="width:80px; " /></li>
+            <li style="border: 1px solid lightgray; width: 550px;"></li>
+        }
+    }
+    <li style="padding-bottom: 20px;"></li>
+</ul>

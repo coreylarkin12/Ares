@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "XOrdered";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using Exercises.Web.Models
+@model Exercises.Web.Models.Order
+
+<h2 style="text-align: left; margin: 0 auto; padding-bottom: 20px; font-weight: bold;">Enter Name</h2>
+
+@using (Html.BeginForm("XOrderResult", "Home", FormMethod.Get))
+{
+    <div class="formInputGroup">
+        @Html.Label("firstname", "First Name:")
+        @Html.TextBoxFor(m => m.FirstName)
+    </div>
+    <div class="formInputGroup">
+        @Html.Label("middleintial", "Middle Initial:")
+        @Html.TextBoxFor(m => m.MiddleInt)
+    </div>
+    <div class="formInputGroup">
+        @Html.Label("lastname", "Last Name:")
+        @Html.TextBoxFor(m => m.LastName)
+    </div>
+    <h2 style="font-weight: bold; ">Choose Order</h2>
+    <div class="formInputGroup-radio">
+        @Html.DropDownListFor(m => m.OrderList, Order.Ordered)
+    </div>
+
+
+    <button class="formSubmitButton">CALCULATE!</button>
+}

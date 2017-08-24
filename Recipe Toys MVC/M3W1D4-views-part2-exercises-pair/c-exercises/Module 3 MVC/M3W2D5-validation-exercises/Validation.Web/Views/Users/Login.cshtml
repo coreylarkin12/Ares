@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using Validation.Web.Models
+@model  LoginViewModel
+
+<h2>Login </h2>
+
+@using (Html.BeginForm("Login", "Users", FormMethod.Post))
+{
+    <div>
+        @Html.LabelFor(m => m.Email, "Email")
+        @Html.EditorFor(m => m.Email)
+        @Html.ValidationMessageFor(m => m.Email)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Password, "Password")
+        @Html.PasswordFor(m => m.Password)
+        @Html.ValidationMessageFor(m => m.Password)
+    </div>
+    <br />
+    <button>Submit</button>
+
+}

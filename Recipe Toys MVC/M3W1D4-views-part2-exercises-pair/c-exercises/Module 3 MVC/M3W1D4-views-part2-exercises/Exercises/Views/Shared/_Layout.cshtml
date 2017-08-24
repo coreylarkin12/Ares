@@ -1,0 +1,28 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Table View</title>
+    <link rel="stylesheet" href="~/Content/styles.css" />
+</head>
+<body>
+    <header>
+        <h1>ASP.NET MVC Exercises - Views Part 2: Models</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>@Html.ActionLink("Tile Layout", "Tile", "Product")</li>
+            <li>@Html.ActionLink("Table Layout", "Table", "product")</li>
+            <li>@Html.ActionLink("List Layout", "List", "Product")</li>
+        </ul>
+    </nav>
+    <section id="main-content">
+        @RenderBody()
+    </section>
+</body>
+</html>

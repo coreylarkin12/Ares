@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "XOrderResult";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using Exercises.Web.Models;
+@model Exercises.Web.Models.Order
+
+<h2 style=" margin-right: 0 auto; padding-bottom: 20px; text-align:left; font-weight:bold;">Ordered Name</h2>
+
+<section>
+
+  
+    <ul style="list-style:none;">
+         <li>First Name: <strong>@Model.FirstName</strong></li>
+         <li>Middle Initial: <strong>@Model.MiddleInt</strong></li>
+         <li>Last Name: <strong>@Model.LastName</strong></li>
+         <li></li>
+         <li></li>
+        <li></li>
+        <li>Ordered: @Model.OrderChange().ToString()</li>
+
+    </ul>
+
+    <p>@Html.ActionLink("Choose Another Order", "XOrder", "Home")</p>
+</section>

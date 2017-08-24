@@ -1,0 +1,59 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model List<Exercises.Models.Product>
+
+
+
+    <h2 class="center">Toy Department</h2>
+
+    <table class="left">
+        <tr>
+            <th></th>
+            <td style="color: red;"><img src="~/Content/images/toy-balls.jpg" style="width: 75px" /><br /> Best Seller!</td>
+            <td><img src="~/Content/images/toy-car.jpg" style="width: 75px;" /></td>
+            <td><img src="~/Content/images/toy-gym.jpg" style="width: 75px;" /></td>
+            <td><img src="~/Content/images/toy-horse.jpg" style="width: 75px" /></td>
+            <td style="color: red;"><img src="~/Content/images/toy-snail.jpg" style="width: 75px;" /><br />Best Seller!</td>
+            <td style="color: red;"><img src="~/Content/images/toy-tricycle.jpg" style="width: 75px;" /><br />Best Seller!</td>
+        </tr>
+        <tr>
+            <th>Name</th>
+            @foreach (Exercises.Models.Product products in Model)
+            {
+                <td style="background-color:lightgray; column-width: 450px;" >@products.Name</td>
+            }
+        </tr>
+        <tr>
+            <th>Rating</th>
+            <td><img src="~/Content/images/4-star.png" style="width: 80px;" /></td>
+            <td><img src="~/Content/images/3-star.png" style="width: 80px;" /></td>
+            <td><img src="~/Content/images/1-star.png" style="width: 80px;" /></td>
+            <td><img src="~/Content/images/4-star.png" style="width: 80px;" /></td>
+            <td><img src="~/Content/images/5-star.png" style="width: 80px;" /></td>
+            <td><img src="~/Content/images/5-star.png" style="width: 80px;" /></td>
+                
+        </tr>
+        <tr>
+            <th>Mfr</th>
+            @foreach (Exercises.Models.Product manufature in Model)
+            {
+                <td style="background-color: lightgray; column-width: 450px;">@manufature.Manufacturer</td>
+            }
+        </tr>
+        <tr>
+            <th>Price</th>
+            @foreach (Exercises.Models.Product prices in Model)
+            {
+                <td style="column-width: 450px; color: darkred; font-weight: bold;">$@prices.Price</td>
+            }
+        </tr>
+        <tr>
+            <th>wt. (in lbs)</th>
+            @foreach (Exercises.Models.Product weight in Model)
+            {
+                <td style="background-color: lightgray; column-width: 450px;">@weight.WeightIbLbs</td>
+            }
+        </tr>
+    </table>

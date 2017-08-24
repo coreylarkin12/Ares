@@ -1,0 +1,31 @@
+﻿@using FormsWithHttpPost.DAL;
+@using FormsWithHttpPost.Models;
+@model Review
+@{
+    ViewBag.Title = "Squirrel Review";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style=" text-align:left; margin-right: 0 auto; padding-bottom: 10px;">New Book Review</h2>
+
+@using (Html.BeginForm("SquirrelReviewResult", "Home", FormMethod.Post))
+{
+    <div class="formInputGroup">
+        @Html.Label("userName", "Enter your username")
+        @Html.TextBoxFor(m => m.Username)
+    </div>
+    <div class="formInputGroup">
+        @Html.Label("rating", "How many stars?(1-5)")
+        @Html.TextBoxFor(m => m.Rating)
+    </div>
+    <div class="formInputGroup">
+        @Html.Label("title", "Provide a title")
+        @Html.TextBoxFor(m => m.Title)
+    </div>
+    <div>
+        @Html.Label("text", "Review")
+        @Html.TextBoxFor(m => m.Message, new { style = "height:2em;" })
+    </div>
+
+    <button class="formSubmitButton">Submit!</button>
+}

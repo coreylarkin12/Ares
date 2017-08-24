@@ -1,0 +1,36 @@
+﻿@using FormsWithHttpPost.DAL;
+@using FormsWithHttpPost.Models;
+@model Review
+@{
+    ViewBag.Title = "Squirrel Review Result";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    string connectionString = @"Data Source = localhost\sqlexpress; Initial Catalog = Squirrels; Integrated Security = True";
+
+
+    ReviewSqlDAL dal = new ReviewSqlDAL(connectionString);
+    List<Review> review = dal.GetAllReviews();
+}
+
+<img src="~/Content/forDummies.png" style="text-align:left; width: 200px;" />
+
+<h2 style=" text-align:left; margin-right: 0 auto; padding-bottom: 10px;">Past Reviews</h2>
+<p style="color: blue; font-weight: bold; text-align:left; margin-right: 0 auto; padding-bottom: 5px;">@Html.ActionLink("Post a Review", "SquirrelReview", "Home")</p>
+
+<ul style="list-style: none; text-align: left; margin-right: 0 auto;">
+    @if (review.Count > 0)
+    {
+        foreach (Review post in review)
+        {
+            string postDate = post.ReviewDate.ToString("MM/dd/yyyy");
+            <li style="font-weight: bold; padding-top: 2px; font-size: 14px; ">@post.Title <img style="width: 80px;" src="~/Content/@(post.Rating).png" /></li>
+            <li style="font-size: 12px; padding-bottom: 10px;">by @post.Username on @postDate</li>
+            <li style="padding-bottom: 20px; font-size: 12px;">@post.Message</li>
+            <li style="border: 0.5px dashed black; background-color: black;"></li>
+            <li style="padding-bottom: 3px;"></li>
+
+        }
+    }
+</ul>

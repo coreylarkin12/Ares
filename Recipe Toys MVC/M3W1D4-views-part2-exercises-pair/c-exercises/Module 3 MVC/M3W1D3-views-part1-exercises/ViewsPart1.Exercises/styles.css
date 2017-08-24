@@ -1,0 +1,22 @@
+﻿body {
+}
+p{
+    font-weight:bold;
+    font-size: 25px;
+}
+.fizzbuzz{
+    color:purple;
+    font-size:20px
+}
+.fizz{
+    color:red;
+}
+.buzz{
+    color:blue;
+}
+.fib{
+    font-weight:bold;
+}
+.echo{
+    font-weight: bold;
+}

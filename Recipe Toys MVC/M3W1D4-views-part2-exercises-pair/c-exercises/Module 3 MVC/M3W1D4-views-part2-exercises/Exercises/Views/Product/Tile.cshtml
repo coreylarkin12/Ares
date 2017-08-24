@@ -1,0 +1,172 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using Exercises.Models;
+@model List<Exercises.Models.Product>
+
+    <h2 style="text-align: center; margin: 0 auto;">Toy Department</h2>
+
+    <table style="list-style: none; text-align: center;margin: 0 auto; display: flex;">
+
+    @foreach (Product toyBalls in Model)
+    {
+    <tr style="padding-top: 10px;">
+    @if (toyBalls.ProductId == "SKU-1234")
+    {
+    <tr>
+        <td style="padding-left: 20px; padding-top: 10px;"><img src="~/Content/images/toy-balls.jpg" style="width: 90px;" /></td>
+    </tr>
+        <tr>
+            <td style="padding-left: 20px; font-size: 12px;">@toyBalls.Name Best Seller!</td>
+        </tr>
+        <tr>
+            <td style="padding-left: 20px; font-size: 12px;">@toyBalls.Manufacturer</td>
+        </tr>
+        <tr>
+            <td style="padding-left: 20px; font-size: 12px;">@toyBalls.Price</td>
+        </tr>
+        <tr>
+            <td style="padding-left: 20px; font-size: 12px;">@toyBalls.WeightIbLbs</td>
+        </tr>
+        <tr>
+            <td style="padding-left: 20px; padding-bottom: 10px; font-size: 12px;"><img src="~/Content/images/4-star.png" style="width:80px; " /></td>
+        </tr>
+    }
+    </tr>
+    <tbody style="padding-top: 10px; padding-left: 25px; text-align: center;">
+        <tr>
+            @if (toyBalls.ProductId == "SKU-2345")
+            {
+            <tr>
+                <td style="padding-left: 20px; padding-top:10px; text-align:center;"><img src="~/Content/images/toy-car.jpg" style="width: 90px;" /></td>
+            </tr>
+            <tr>
+                <td style="padding-left: 20px; font-size: 12px; text-align: center;">@toyBalls.Name Best Seller!</td>
+            </tr>
+            <tr>
+                <td style="padding-left: 20px; font-size: 12px; text-align: center;">@toyBalls.Manufacturer</td>
+            </tr>
+            <tr>
+                <td style="padding-left: 20px; font-size: 12px; text-align: center;">@toyBalls.Price</td>
+            </tr>
+            <tr>
+                <td style="padding-left: 20px; font-size: 12px; text-align: center;">@toyBalls.WeightIbLbs</td>
+            </tr>
+            <tr>
+                <td style="padding-left: 20px; font-size: 12px; text-align:center; padding-bottom: 10px;"><img src="~/Content/images/3-star.png" style="width:80px; " /></td>
+            </tr>
+            }
+            </tr>
+        </tbody>
+    }
+    <tr style="list-style: none; text-align: center; margin: 0 auto; display: table-row;">
+    @foreach (Product toyBalls in Model)
+    {
+        if (toyBalls.ProductId == "SKU-5678")
+        {
+            <tr>
+                <td style="padding-left: 20px; padding-top:10px; text-align:center;"><img src="~/Content/images/toy-gym.jpg" style="width: 90px;" /></td>
+            </tr>
+            <tr>
+                <td style="padding-left: 20px; font-size: 12px; text-align: center;">@toyBalls.Name Best Seller!</td>
+            </tr>
+            <tr>
+                <td style="padding-left: 20px; font-size: 12px; text-align: center;">@toyBalls.Manufacturer</td>
+            </tr>
+            <tr>
+                <td style="padding-left: 20px; font-size: 12px; text-align: center;">@toyBalls.Price</td>
+            </tr>
+            <tr>
+                <td style="padding-left: 20px; font-size: 12px; text-align: center;">@toyBalls.WeightIbLbs</td>
+            </tr>
+            <tr>
+                <td style="padding-left: 20px; font-size: 12px; text-align:center; padding-bottom: 10px;"><img src="~/Content/images/1-star.png" style="width:80px; " /></td>
+            </tr>
+
+
+            }
+        }
+    </tr>
+    </table>
+    <table style="list-style: none; text-align: center;margin: 0 auto; display: flex;">
+
+    @foreach (Product toyBalls in Model)
+    {
+    <tr style="padding-top: 10px;">
+    @if (toyBalls.ProductId == "SKU-1234")
+    {
+    <tr>
+        <td style="padding-left: 20px; padding-top: 10px;"><img src="~/Content/images/toy-horse.jpg" style="width: 90px;" /></td>
+    </tr>
+    <tr>
+        <td style="padding-left: 20px; font-size: 12px;">@toyBalls.Name Best Seller!</td>
+    </tr>
+        <tr>
+            <td style="padding-left: 20px; font-size: 12px;">@toyBalls.Manufacturer</td>
+        </tr>
+        <tr>
+            <td style="padding-left: 20px; font-size: 12px;">@toyBalls.Price</td>
+        </tr>
+        <tr>
+            <td style="padding-left: 20px; font-size: 12px;">@toyBalls.WeightIbLbs</td>
+        </tr>
+        <tr>
+            <td style="padding-left: 20px; padding-bottom: 10px; font-size: 12px;"><img src="~/Content/images/4-star.png" style="width:80px; " /></td>
+        </tr>
+    }
+    </tr>
+    <tbody style="padding-top: 10px; padding-left: 25px; text-align: center;">
+        <tr>
+            @if (toyBalls.ProductId == "SKU-2345")
+            {
+            <tr>
+                <td style="padding-left: 20px; padding-top:10px; text-align:center;"><img src="~/Content/images/toy-snail.jpg" style="width: 90px;" /></td>
+            </tr>
+            <tr>
+                <td style="padding-left: 20px; font-size: 12px; text-align: center;">@toyBalls.Name Best Seller!</td>
+            </tr>
+            <tr>
+                <td style="padding-left: 20px; font-size: 12px; text-align: center;">@toyBalls.Manufacturer</td>
+            </tr>
+            <tr>
+                <td style="padding-left: 20px; font-size: 12px; text-align: center;">@toyBalls.Price</td>
+            </tr>
+            <tr>
+                <td style="padding-left: 20px; font-size: 12px; text-align: center;">@toyBalls.WeightIbLbs</td>
+            </tr>
+            <tr>
+                <td style="padding-left: 20px; font-size: 12px; text-align:center; padding-bottom: 10px;"><img src="~/Content/images/5-star.png" style="width:80px; " /></td>
+            </tr>
+            }
+            </tr>
+        </tbody>
+        }
+    <tr style="list-style: none; text-align: center; margin: 0 auto; display: table-row;">
+        @foreach (Product toyBalls in Model)
+        {
+            if (toyBalls.ProductId == "SKU-5678")
+            {
+            <tr>
+                <td style="padding-left: 20px; padding-top:10px; text-align:center;"><img src="~/Content/images/toy-tricycle.jpg" style="width: 90px;" /></td>
+            </tr>
+                    <tr>
+                        <td style="padding-left: 20px; font-size: 12px; text-align: center;">@toyBalls.Name Best Seller!</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 20px; font-size: 12px; text-align: center;">@toyBalls.Manufacturer</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 20px; font-size: 12px; text-align: center;">@toyBalls.Price</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 20px; font-size: 12px; text-align: center;">@toyBalls.WeightIbLbs</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 20px; font-size: 12px; text-align:center; padding-bottom: 10px;"><img src="~/Content/images/5-star.png" style="width:80px; " /></td>
+                    </tr>
+
+
+            }
+        }
+    </tr>
+</table>
