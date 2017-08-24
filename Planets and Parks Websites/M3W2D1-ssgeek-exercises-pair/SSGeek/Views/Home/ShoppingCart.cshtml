@@ -1,0 +1,33 @@
+﻿@using SSGeek.Models;
+@model List<Product>
+@{
+    ViewBag.Title = "Shopping Cart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    double grandTotal = 0;
+}
+
+    <h2 style="text-align: center; font-weight: bold; margin: 0 auto; padding-bottom: 20px;">Solar System Geek Gift Shop</h2>
+   <table style="text-align: left;">
+      <tr>
+          <td></td>
+          <td style="font-weight:bold"><h4>Name</h4></td>
+          <td style="padding-left: 500px; font-weight:bold"><h4>Price</h4></td>
+          <td style="font-weight:bold"><h4>Qty.</h4></td>
+          <td style="font-weight:bold"><h4>Total</h4></td>
+      </tr>
+        @for(int i =0; i<Model.Count; i++)
+        {
+            grandTotal = grandTotal + (Model[i].Price * Model[i].Quantity);
+            <tr>
+                <th><img src="~/Content/img/@Model[i].ImageName" style=" width: 300px; padding-bottom: 5px;" /></th>
+                <td style=" column-width: 400px;">@Model[i].Name</td>
+                <td style=" padding-left: 500px;">$@(Model[i].Price.ToString("0.00"))</td>
+                <td style=" padding-left: 15px;">@Model[i].Quantity</td>
+                <td style="">$@((Model[i].Price * Model[i].Quantity).ToString("0.00"))</td>
+            </tr>
+
+        }
+   </table>
+<h4 style="color: white; text-align: right;">Grand Total $@grandTotal.ToString("0.00") </h4>
+<p style="text-align:right;"><a href="#">Check out</a></p>
+  
