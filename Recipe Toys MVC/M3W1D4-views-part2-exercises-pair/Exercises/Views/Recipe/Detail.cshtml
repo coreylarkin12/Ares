@@ -1,0 +1,40 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using Exercises.Models;
+@model Recipe
+
+
+@if (Model.Id == "roasted-chili-broccoli")
+{
+    <img class="detailImg" src="~/Content/images/roasted-chili-broccoli.jpg" style="width: 200px;" />
+}
+else if (Model.Id == "arugula-pasta")
+{
+    <img class="detailImg" src="~/Content/images/arugula-pasta.jpg" style="width: 200px;" />
+}
+else
+{
+    <img class="detailImg" src="~/Content/images/mexican-rice-pilaf.jpg" style="width: 200px;" />
+}
+
+<h4 id="recipeName">@Model.Name</h4>
+<p id="recipeType">@Model.RecipeType</p>
+<p class="Lbl cok">Cook Time: </p><p id="ckTime"> @Model.CookTimeInMinutes minutes</p>
+<p id="desc">@Model.Description</p>
+
+<h4 class="Lbl ing">Ingredients</h4>
+<ul class="ingList">
+
+    @foreach(Ingredient ingredient in Model.Ingredients)
+    {
+        <li>@ingredient.Quantity @ingredient.Name</li>
+    }
+</ul>
+<h4 class="Lbl prep">Preperation</h4>
+<ol class="prepList">
+    @foreach (string prep in Model.PreparationSteps)
+    {
+        <li>@prep</li>
+    }
+</ol>

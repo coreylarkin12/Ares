@@ -1,0 +1,26 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using Exercises.Models;
+@model Dictionary<string, Recipe>
+
+<h1>Recipes</h1>
+
+<div class="tile">
+    <ul>
+        @foreach (KeyValuePair<string, Recipe> item in Model)
+        {
+            string imgFile = $"/Content/images/{item.Value.Id}.jpg";
+            string ratingFile = $"/Content/images/{(int)item.Value.AverageRating}-star.png";
+            <a id="tileLink" href="http://localhost:63387/Recipe/Detail/@item.Value.Id">
+                <li>
+                    <img id="tileImage" src=@imgFile alt="A nice picture of @item.Value.Name" />
+                    <h2 id="tileName">@item.Value.Name</h2>
+                    <img id="tileRating" src=@ratingFile alt="This item has a @((int)item.Value.AverageRating) star rating" />
+                    <p id="ingredientCount">@item.Value.Ingredients.Count ingredients</p>
+                </li>
+            </a>
+        }
+    </ul>
+</div>
