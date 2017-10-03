@@ -27,6 +27,14 @@ namespace Ares2.Controllers
             return View("Contact");
         }
 
+        public IActionResult Capstone()
+        {
+            ViewData["Message"] = "This page contains a brief description and images of my capstone project.";
+
+            return View("Capstone");
+        }
+
+
         public IActionResult Error()
         {
             return View();
