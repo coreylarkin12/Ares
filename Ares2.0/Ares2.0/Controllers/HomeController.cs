@@ -34,6 +34,13 @@ namespace Ares2.Controllers
             return View("Capstone");
         }
 
+        public IActionResult Chat()
+        {
+            ViewData["Message"] = "This page contains a live chat for anyone to use.";
+
+            return View("Chat");
+        }
+
 
         public IActionResult Error()
         {
