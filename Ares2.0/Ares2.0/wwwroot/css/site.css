@@ -64,32 +64,32 @@ textarea {
     }
 
     #game #gameboard {
-        background-image: url('images/waves.jpg');
+        background-image: url(../images/waves.jpg);
         background-size: 100% 100%;
         background-repeat: no-repeat;
         margin: 5px auto;
     }
 
         #game #gameboard .ship {
-            background-image: url('images/boat-on-waves.jpg');
+            background-image: url(../images/boat-on-waves.jpg);
             background-size: 100% 100%;
             background-repeat: no-repeat;
         }
 
         #game #gameboard .pirate {
-            background-image: url('images/flag-on-waves.jpg');
+            background-image: url(../images/flag-on-waves.jpg);
             background-size: 100% 100%;
             background-repeat: no-repeat;
         }
 
         #game #gameboard .iceberg {
-            background-image: url('images/iceberg-on-waves.jpg');
+            background-image: url(../images/iceberg-on-waves.jpg);
             background-size: 100% 100%;
             background-repeat: no-repeat;
         }
 
         #game #gameboard .treasure {
-            background-image: url('images/treasure.jpg');
+            background-image: url(../images/treasure.jpg);
             background-size: 100% 100%;
             background-repeat: no-repeat;
         }

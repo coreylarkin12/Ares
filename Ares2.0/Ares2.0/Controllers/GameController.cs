@@ -11,7 +11,7 @@ namespace Ares.Controllers
         private const int DefaultGridSize = 10;
 
         // GET: Game/Index?gridSize={int}
-        public IActionResult Game(int? gridSize)
+        public IActionResult Index(int? gridSize)
         {
             // If the user didn't provide a gridSize (? makes it nullable)
             // or they gave a value greater than 50 then just set it to 10

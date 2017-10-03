@@ -26,4 +26,19 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\Scripts\exercises\api-exercises.js" />
+    <None Include="wwwroot\Scripts\exercises\dom-exercises.js" />
+    <None Include="wwwroot\Scripts\exercises\event-exerises.js" />
+    <None Include="wwwroot\Scripts\exercises\validation-exercises.js" />
+    <None Include="wwwroot\Scripts\exercises\websocket-exercises.js" />
+    <None Include="wwwroot\jquery-3.1.1.intellisense.js" />
+    <None Include="wwwroot\jquery-3.1.1.js" />
+    <None Include="wwwroot\jquery-3.1.1.min.js" />
+    <None Include="wwwroot\jquery-3.1.1.min.map" />
+    <None Include="wwwroot\jquery-3.1.1.slim.js" />
+    <None Include="wwwroot\jquery-3.1.1.slim.min.js" />
+    <None Include="wwwroot\jquery-3.1.1.slim.min.map" />
+  </ItemGroup>
+
 </Project>

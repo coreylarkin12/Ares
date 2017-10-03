@@ -1,11 +1,13 @@
+﻿
 @model int
 @{
-    ViewBag.Title = "Game";
+    ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div id="game">
     <h2>Pirate Explorer </h2>
+    <p style="color:red">to change grid size type this in url "/Index?gridSize=" and any number 1-50 after "/Game" </p>
     <button id="btnRestart">Restart</button>
 
     <table id="gameboard">
@@ -19,17 +21,17 @@
                 {
                     string cellId = $"row_{row}_column_{column}";
                     string cellClass = "gamecell";
-                    if(column == 0 && row == 0)
+                    if (column == 0 && row == 0)
                     {
                         cellClass += " ship";
                     }
-                    else if ( column == Model - 1 && row == Model - 1)
+                    else if (column == Model - 1 && row == Model - 1)
                     {
                         cellClass += " treasure";
                     }
                     else
                     {
-                        if (((row*column) + (column+1)) % 7 == 0)
+                        if (((row * column) + (column + 1)) % 7 == 0)
                         {
                             cellClass += " iceberg";
                         }
@@ -46,6 +48,4 @@
     </table>
 
 </div>
-
-
 
