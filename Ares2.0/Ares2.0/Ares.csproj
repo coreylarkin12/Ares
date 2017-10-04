@@ -8,6 +8,7 @@
   <ItemGroup>
     <PackageReference Include="AngularJs.SignalR.Hub" Version="1.6.3" />
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNet.SignalR.Client" Version="2.2.2" />
     <PackageReference Include="Microsoft.AspNet.SignalR.JS" Version="2.2.2" />
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.3" />
