@@ -1,4 +1,5 @@
-﻿/// <reference path="../jquery-3.1.1.js" />
+﻿/// <reference path="..jquery-3.1.1.js"/>
+
 $(document).ready(function () {
 
     // AJAX request - when billing zip code changes

@@ -41,6 +41,13 @@ namespace Ares2.Controllers
             return View("Chat");
         }
 
+        public IActionResult Mentor()
+        {
+            ViewData["Message"] = "Information regarding my mentor.";
+
+            return View("Mentor");
+        }
+
 
         public IActionResult Error()
         {
