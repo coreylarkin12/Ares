@@ -10,22 +10,38 @@ namespace Zeuz.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return View("Index");
         }
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "A talented programmer.";
 
-            return View();
+            return View("About");
         }
 
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Message"] = "Please contact me to set up interviews.";
 
-            return View();
+            return View("Contact");
         }
+
+        public IActionResult Capstone()
+        {
+            ViewData["Message"] = "This page contains a brief description and images of my capstone project.";
+
+            return View("Capstone");
+        }
+
+        public IActionResult Mentor()
+        {
+            ViewData["Message"] = "Information regarding my mentor.";
+
+            return View("Mentor");
+        }
+
+
 
         public IActionResult Error()
         {
