@@ -3,6 +3,9 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp1.1</TargetFramework>
     <PackageTargetFallback>$(PackageTargetFallback);portable-net45+win8+wp8+wpa81;</PackageTargetFallback>
+    <Authors>Corey Larkin</Authors>
+    <Description>A Website meant to demonstrate my abilities as a programmer and to act as my new resume for jobs.</Description>
+    <StartupObject></StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
