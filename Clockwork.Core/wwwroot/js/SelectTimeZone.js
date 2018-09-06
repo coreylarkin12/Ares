@@ -1,4 +1,6 @@
-﻿function UserAction() {
+﻿
+
+function UserAction() {
     $.get("http://localhost:58148/api/selecttimezone").done(function (data) {
         $.each(data, function (i, item) {
             $('#mySelect').append($('<option>', {
