@@ -2,32 +2,9 @@
 @{
     ViewData["Title"] = "SelectTimeZone";
 }
-
+<script src="~/js/SelectTimeZone.js"></script>
 <br />
 <br />
-<script type="text/javascript">
-
-    function UserAction() {
-        $.get("http://localhost:58148/api/selecttimezone").done(function (data) {
-            $.each(data, function (i, item) {
-                $('#mySelect').append($('<option>', {
-                    value: item.BaseUtcOffset,
-                    text: item.DisplayName
-                }));
-            });
-        });
-    }
-
-    function ConvertTime() {
-        var selectedTimeZone = $('#mySelect').find(":selected").val();
-        var name = $('#mySelect').find(":selected").text();
-
-        selectedTimeZone.toString();
-
-        $('#converted').append('<li>  ' + selectedTimeZone + '  ---  ' + name + '</li>')
-    }
-
-</script>
 
 <ol class="breadcrumb" style="background:none;">
     <li class="breadcrumb-item"><a href="/">Home</a></li>
