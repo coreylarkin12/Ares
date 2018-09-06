@@ -1,0 +1,90 @@
+﻿
+@{
+    ViewData["Title"] = "AllEntries";
+}
+
+<style>
+    body, html {
+        height: 100%;
+    }
+
+    .overflow {
+        max-height: 500px;
+        overflow-y: scroll;
+    }
+
+    .bg {
+        /* The image used */
+        background-image: url("../images/usa.jpg");
+        /* Full height */
+        height: 100%;
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+
+<script type="text/javascript">
+   
+    function formatItem(item) {
+        return '<td>' + item.ClientIp + '</td> <td> ' + item.CurrentTimeQueryId + ' </td><td>' + item.Time + '</td><td>' + item.UTCTime + '</td>';
+    }
+    function GetAll() {
+        $.get("http://localhost:58148/api/getall").done(function (data) {
+            $.each(data, function (key, item) {
+                $('<tr>', { html: formatItem(item) }).appendTo($("#getAllTable"));
+                $('#show').attr("disabled", true)
+            })
+        });
+
+    }
+</script>
+
+<br />
+<br />
+<ol class="breadcrumb" style="background:none;">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item active">All Entries</li>
+</ol>
+
+<body class=" bg container">
+
+    <div class="container">
+        <div class="panel panel-primary">
+            <div data-toggle="collapse" data-target="#getAllBody" class="panel-heading align-content-center clickable">
+                <span>Clockwork - All Entries</span>
+            </div>
+            <div class="panel-body collapse in" id="getAllBody">
+                <div class="row">
+                    <div class="col-md-12">
+                        <button id="show" class="btn btn-success pull-right align-content-center" type="button" onclick="GetAll()">Load All Entries</button>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="overflow col-md-12">
+                        <table id="getAllTable" class="table table-striped table-hover col-md-12">
+                            <thead>
+                                <tr>
+                                    <th>Client IP</th>
+                                    <th>Current Time Query Id</th>
+                                    <th>Time</th>
+                                    <th>UTC Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td id="clientIp"></td>
+                                    <td id="currentTimeQueryId"></td>
+                                    <td id="time"></td>
+                                    <td id="utcTime"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

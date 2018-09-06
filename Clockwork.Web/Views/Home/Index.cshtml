@@ -1,0 +1,54 @@
+﻿
+
+<script src="~/Scripts/js/bootstrap.js"></script>
+<script src="~/Scripts/js/bootstrap.min.js"></script>
+<link href="~/Scripts/css/bootstrap.css" rel="stylesheet" />
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+</script>
+
+<script type="text/javascript">
+    function UserAction() {
+        $.get("http://localhost:58148/api/currenttime").done(function (data) {
+            $('#clientIp').html(data.clientIp);
+            $('#currentTimeQueryId').html(data.currentTimeQueryId);
+            $('#time').html(data.time);
+            $('#utcTime').html(data.utcTime);
+        });
+    }
+</script>
+
+<div style="margin-left:150px;" class="col-md-12">
+    <h2 class="col-md-12">AWH Clockwork Project @ViewData["Version"] on @ViewData["Runtime"]!</h2>
+</div>
+
+<div style="margin-left:150px;">
+    <button class="btn btn-success" type="button" onclick="UserAction()">Get the time</button>
+</div>
+
+
+<div class="col-md-12" id="output">
+    <div class="row">
+        <div class="col-md-1">
+            <label class="float-sm-right">Client IP: </label>
+        </div>
+        <div class="col-md-6">
+            <span id="clientIp"></span>
+        </div>       
+    </div>
+    <div class="row">
+        <label>Current Time Query Id: </label>
+        <span id="currentTimeQueryId"></span>
+    </div>
+    <div class="row">
+        <label>Time: </label>
+        <span id="time"></span>
+    </div>
+    <div class="row">
+        <label>UTC Time: </label>
+        <span id="utcTime"></span>
+    </div>
+</div>
+
