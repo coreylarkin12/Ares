@@ -66,12 +66,6 @@
     <Compile Include="Controllers\HomeControllerTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Clockwork.Web\Clockwork.Web.csproj">
-      <Project>{6C746601-B1E6-4A18-8FCB-55582976384F}</Project>
-      <Name>Clockwork.Web</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>

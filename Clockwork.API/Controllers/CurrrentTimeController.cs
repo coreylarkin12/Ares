@@ -6,7 +6,6 @@ using System.Collections.ObjectModel;
 
 namespace Clockwork.API.Controllers
 {
-    //[Route("api/[controller]")]
     public class CurrentTimeController : Controller
     {
         // GET api/currenttime
